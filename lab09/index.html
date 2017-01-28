@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Лаботарорная работа №9</title>
+	<script src="jquery-1.9.1.js"></script>
+</head>
+<body>
+	<script type="text/javascript">
+	var names = ["Задачи", "Пособия", "Вопросы", "Опросы", "Поиск", "Контакты", "Закрыть"];
+	for(i=0;i<7;i++){
+		document.writeln('<div id="m'+i+'" onclick=alert("'+names[i]+'")></div>');
+		m=document.getElementById('m'+i);
+		m.style.float='left';
+		m.style.width='100px';
+		m.style.height='200px';
+		m.style.backgroundImage='url(im'+(i+1)+'.png)';
+		$('#m'+i).hover(p,h);
+	}
+	function p () {
+		$(this).animate({width:"300"},300);
+	}
+	function h(){
+		$(this).animate({width:"100"},300);
+	}
+</script>
+</body>
+</html>

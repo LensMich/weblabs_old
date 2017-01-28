@@ -1,0 +1,53 @@
+*{
+	margin: 5px;
+	padding: 0;
+}
+
+#blue{
+	font-family:Tahoma;
+	font-size:large;
+	width: 500px;
+	height: 350px;
+	background-color: lightblue;
+}
+
+#out{
+	position: fixed;
+	margin-top: 130px;
+	margin-left: 170px;
+}
+
+#cent{
+	position: fixed;
+	margin-top: 150px;
+	margin-left: 130px;
+}
+
+#yellow{
+	background-color: yellow;
+	width: 500px;
+	height: 150px;
+	margin-top: -5px;
+}
+
+#texta{
+	font-family:Tahoma;
+	font-size:large;
+	position: fixed;
+	margin-top: 20px;
+	margin-left: 130px;
+}
+
+#textb{
+	font-family:Tahoma;
+	font-size:large;
+	position: fixed;
+	margin-top: 60px;
+	margin-left: 110px;
+}
+
+#sun{
+	position: absolute;
+	left: 550px;
+	top: 100px;
+}

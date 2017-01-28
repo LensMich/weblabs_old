@@ -1,0 +1,65 @@
+﻿<html>
+<head>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="blue">
+		<script>
+		function Rand(min,max)
+		{
+			return Math.floor(Math.random()*(max-min+1)+min);
+		}
+		var a = 0;
+		var b = 0;
+		function otvet()
+		{
+			text=document.getElementById("texta");
+			otvet1=document.getElementById("otvet1");
+			text2=document.getElementById("textb");
+			elem=document.getElementById("yellow");
+			if(x+y==otvet1.value)
+			{
+				text.innerHTML='Последний ответ - правильный!';
+				a++;
+				text2.innerHTML='Правильный ответов: '+a+', неправильных: '+b;
+				elem.style.backgroundColor='lightgreen';
+			}
+			else
+			{ 
+				text.innerHTML='Последний ответ - неправильный!';
+				b++;
+				text2.innerHTML='Правильный ответов: '+a+', неправильных: '+b;
+				elem.style.backgroundColor='red';
+			}
+			out=document.getElementById("out");
+			x = Rand(1,100);
+			y = Rand(1,100);
+			out.innerHTML='Сколько будет '+x+'+'+y+'?';
+		}
+		x = Rand(1,100);
+		y = Rand(1,100);
+		document.writeln('<span id="out">Сколько будет '+x+'+'+y+'?</span>');
+		</script>
+		<br>
+		<div id="cent"><input type="text" id="otvet1"></input><button onClick="otvet()">Проверить</button></div>
+	</div>
+	<script>
+	function rnd(min,max)
+	{
+		return Math.floor(Math.random()*(max-min+1)+min);
+	}
+	function sol () {
+		s=document.getElementById("sun");
+		s.style.top=rnd(10,550)+'px';
+		s.style.left=rnd(10,550)+'px';
+	}
+	</script>
+	<img id="sun" src="sun.gif" onmouseover="sol()">
+	<div id="yellow">
+		<br>
+		<div id="texta"></div>
+		<div id="textb"></div>
+	</div>
+</body>
+</html>
